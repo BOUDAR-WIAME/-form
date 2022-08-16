@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="validation.js" defer></script>
+    <title>Exercice 3 -- programmation w--</title>
+</head>
+<body>
+        <p id="D"></p>
+        
+        <form name="formulaire">
+            <fieldset>
+            <legend><b>INSCRIPTION</b></legend>
+        
+        <table>
+            <tr>
+                <p><td>Nom<span style="color:rgb(255, 0, 0)">*</td></p><td><input type="text" name="name" placeholder="Entre votre Nom" id="name"></td>
+                <td><p id="nn" span style="color:rgb(255, 0, 0)"></p></td>
+            </tr>
+            <tr>
+                <p><td>Prénom<span style="color:rgb(255, 0, 0)">*</td></p><td><input type="text" name="prenom" placeholder="Entre votre Prénom" id="name2"></td>
+            </tr>
+            <tr>
+                <td>Date De Naissance<span style="color:rgb(255, 0, 0)" >*</td><td><input type="date" placeholder="Entre votre date de naissance"></td>
+            </tr>
+            <tr>
+                <td>Pays<span style="color:rgb(255, 0, 0)">*</span></td><td><select name="select">
+                <option>Please select...</option>
+                <option>France</option>
+                <option>Turkey</option>
+                <option>Morocco</option>
+                <option>Italy</option>
+                <option>Tunisia</option>
+                <option>Singapore</option>
+                <option>Qatar</option>
+                <option>Espagne</option>
+                <option>Germany</option>
+                </select></td>
+                
+            </tr>
+            <tr>
+                <td>Genre<span style="color:rgb(255, 0, 0)">*</td>
+                   <td><input type="radio" name="genre" id="Masculin">Homme
+                       <input type="radio" name="genre" id="féminin">Femme</td>
+            </tr>
+            <tr>
+                <td>Préférences De Contact<span style="color:rgb(255, 0, 0)">*</td>
+                   <td><input type="checkbox" name="contact" value="Fax" >Fax
+                       <input type="checkbox" name="contact" value="Email">Email
+                    <input type="checkbox" name="contact" value=" téléphone">Téléphone</td>
+            </tr>
+            <tr>
+                <td>Email<span style="color:rgb(255, 0, 0)">*</td><td><input type="email" name="Email" placeholder="Entre votre email" ></td>
+            </tr>
+            <tr>
+                <td>Mot De Passe<span style="color:rgb(255, 0, 0)">*</td><td><input type="password" name="Password" placeholder="Entre votre mot de passe" ></td>
+            </tr>
+            <tr>
+                <td>Confirmer Le Mot De Passe <span style="color:rgb(255, 0, 0)">*<span style="color:rgb(255, 0, 0)"></td><td><input type="password" name="Password" placeholder="Confirmer le mot de passe"></td>
+            </tr>
+            <tr>
+                <td>Code Postal<span style="color:rgb(255, 0, 0)">*</td><td><input type="text" name="code postal" placeholder="Entre le code postal"></td>
+            </tr>
+            <footer>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Envoyer"  onclick="validateForm()">
+                    <input type="submit" value="Effacer"></td>
+            </tr>
+            </footer>
+
+        </Table>
+    </fieldset>
+</form>
+    
+</body>
+</html>
