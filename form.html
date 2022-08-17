@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="form.js" defer></script>
+    <script src="validation.js" defer></script>
      <link rel="stylesheet" href="form.css">
     <title>Exercice 3 -- programmation w--</title>
 </head>
@@ -14,7 +14,7 @@
             <legend><b>INSCRIPTION</b></legend>
         
         <table>
-            <div>
+            
             <tr>
                 <p><td>Nom<span style="color:rgb(255, 0, 0)">*</td></p>
                 <td><input type="text" name="name" placeholder="Entre votre Nom" id="name" minlength="3"></td>
@@ -27,11 +27,11 @@
             </tr>
             <tr>
                 <td>Date De Naissance<span style="color:rgb(255, 0, 0)" >*</td>
-                <td><input type="date" placeholder="Entre votre date de naissance" id="date" minlength="2004"></td>
-                <td><p id="qq"></p></td>
+                <td><input type="date" placeholder="Entre votre date de naissance" id="date" ></td>
+                <td><p id="d"></p></td>
             </tr>
             <tr>
-                <td>Pays<span style="color:rgb(255, 0, 0)">*</span></td><td><select name="select" id="pays">
+                <td>Pays<span style="color:rgb(255, 0, 0)">*</span></td><td><select name="select" id="pays" maxlength="1">
                 <option>Please select...</option>
                 <option>France</option>
                 <option>Turkey</option>
@@ -43,13 +43,14 @@
                 <option>Espagne</option>
                 <option>Germany</option>
                 </select></td>
-                <td><p id="aa"></p></td>
+                <td><p id="py"></p></td>
                 
             </tr>
             <tr>
                 <td>Genre<span style="color:rgb(255, 0, 0)">*</td>
-                   <td><input type="radio" name="genre" id="Masculin">Homme
-                       <input type="radio" name="genre" id="féminin">Femme</td>
+                   <td><input type="radio" name="genre" id="gen" >Homme
+                       <input type="radio" name="genre" id="gen">Femme</td>
+                       <td><p id="g"></p></td>
             </tr>
             <tr>
                 <td>Préférences De Contact<span style="color:rgb(255, 0, 0)">*</td>
@@ -59,7 +60,8 @@
             </tr>
             <tr>
                 <td>Email<span style="color:rgb(255, 0, 0)">*</td>
-                <td><input type="email" name="Email" placeholder="Entre votre email" ></td>
+                <td><input type="email" name="Email" placeholder="Entre votre email" id="email" ></td>
+                <td><p id="e"></p></td>
             </tr>
             <tr>
                 <td>Mot De Passe<span style="color:rgb(255, 0, 0)">*</td>
@@ -76,12 +78,15 @@
                 <td><input type="text" name="code postal" placeholder="Entre le code postal" id="code" minlength="5"></td>
                 <td><p id="ii"></p></td>
             </tr>
-            </div>
+            
             <footer>
             <tr>
                 <td></td>
                 <td><input type="button" value="Envoyer"  onclick="validateForm()">
                     <input type="submit" value="Effacer"></td>
+            </tr>
+            <tr>
+                <td><span style="color:rgb(255, 0, 0)">*<span style="color:rgb(2, 2, 2)"> : champ obligatoire !!</td>
             </tr>
             </footer>
 
