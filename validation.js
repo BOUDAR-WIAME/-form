@@ -1,8 +1,9 @@
+//la date de jour:
 let D = new Date ();
 document.getElementById('D').innerHTML = 'Bonjour Mr/Mme la date est : ' + D.toLocaleDateString();
 
 function validateForm(){ 
-    //nom
+    //nom:
     var x=document.getElementById("name").value;
     var y=document.getElementById("nn");
     var letters = /^[A-Za-z-]+$/;
@@ -13,7 +14,7 @@ function validateForm(){
       else{
           y.innerHTML="✔️" ;
       }
-    //Prénom
+    //Prénom:
     var x=document.getElementById("name2").value;
     var y=document.getElementById("jj");
     var letters = /^[A-Za-z]+$/;
@@ -24,7 +25,7 @@ if(x.length<3 || x==letters) {
     else{
         y.innerHTML="✔️" ;
     }
-    //code posstal
+    //code posstal:
     var x=document.getElementById("code").value;
     var y=document.getElementById("ii");
     var letters = /^[A-Za-z]+$/;
@@ -36,7 +37,7 @@ if(x.length < 5 || x==letters) {
         y.innerHTML="✔️" ;
     }
 
-    //email
+    //email:
     var x=document.getElementById("email").value;
     var y=document.getElementById("e");
     var eml = new RegExp (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@+[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
@@ -47,7 +48,7 @@ if(x.length < 5 || x==letters) {
     else{
         y.innerHTML="✔️" ;
     }
-    //mot de passe
+    //mot de passe:
     var x=document.getElementById("pass").value;
     var y=document.getElementById("pp");
     
@@ -70,18 +71,19 @@ if(x.length < 6 || x=="") {
         y.innerHTML="✔️" ;
     }
 
-    //date
+    //date:
     var x=document.getElementById("date").value;
     var y=document.getElementById("d");
     var age=new Date().getFullYear()-new Date(x).getUTCFullYear();
   if (age < 18 || x == "") {
     y.innerHTML="❌" ;
+    
     }
     else{
         y.innerHTML="✔️" ;
     }
    
-    //pays
+    //pays:
     var x=document.getElementById("pays").value;
     var y=document.getElementById("py");
     
@@ -92,17 +94,27 @@ if(x.length < 6 || x=="") {
       else{
           y.innerHTML="✔️" ;
       }
-      //genre
-      var x=document.getElementById("gen").value;
+      //genre:
+      var genre= document.querySelector('input[name ="genre"]:checked');
       var y=document.getElementById("g");
-      
-      if(x=="") {
+      if(genre != null){ 
+         y.innerHTML="✔️" ; 
+        return false;
+       }
+      else{
           y.innerHTML="❌" ;
-          
+      }
+      
+      //Préférences De Contact:
+      var pdc= document.querySelector('input[name ="contact"]:checked');
+      var y=document.getElementById("c");
+      if(pdc != null){
+          y.innerHTML="✔️" ;
+          return false
         }
         else{
-            y.innerHTML="✔️" ;
-        }
+            y.innerHTML="❌" ;
+            }
       alert('Please completer votre formulaire');
       return false;
 }
