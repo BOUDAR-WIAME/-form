@@ -110,7 +110,7 @@ if(x.length < 6 || x=="") {
       var y=document.getElementById("c");
       if(pdc != null){
           y.innerHTML="✔️" ;
-          return false
+          return false;
         }
         else{
             y.innerHTML="❌" ;
